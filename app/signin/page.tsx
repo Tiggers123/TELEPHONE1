@@ -25,7 +25,7 @@ export default function SignIn() {
 
       if (response.data.token !== null) {
         localStorage.setItem("token", response.data.token);
-        router.push('/backoffice/dashboard')
+        router.push('/dashboard')
       } else {
         Swal.fire({
           title: "ตรวจสอบ user",
@@ -65,6 +65,7 @@ export default function SignIn() {
 
         <button className="mt-4" onClick={handleSignIn}>
           Sign In
+          <i className="fa fa-sign-in-alt ml-2"></i>
         </button>
       </div>
     </div>
